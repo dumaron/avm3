@@ -1,0 +1,58 @@
+{% extends "admin/base_site.html" %} {% block extrahead %}
+<style>
+  #header,
+  .button.default {
+    background-color: #9559ad;
+  }
+
+  div.breadcrumbs,
+  .module h2,
+  #content caption {
+    background-color: #bb8fce;
+  }
+
+  #changelist #toolbar,
+  thead th {
+    background-color: #faf0fa;
+  }
+
+  #content {
+    margin: auto !important;
+  }
+
+  .lesson-number {
+    padding: 0.3em 0.5em;
+    display: inline-block;
+    background-color: gainsboro;
+    border-radius: 0.2em;
+  }
+
+  .lesson-number.success {
+    background-color: darkseagreen;
+    color: seagreen;
+  }
+
+  .lesson-number.warning {
+    background-color: wheat;
+    color: tomato;
+  }
+
+  .lesson-number.danger {
+    background-color: lightpink;
+    color: crimson;
+  }
+
+  .no-space {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .no-space li {
+    list-style: circle !important;
+  }
+
+  .sticky {
+    display: none;
+  }
+</style>
+{% endblock %}

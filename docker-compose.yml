@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: avm
+      POSTGRES_DB: avm
+    ports:
+      - 5439:5432

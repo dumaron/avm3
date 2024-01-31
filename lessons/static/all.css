@@ -1,0 +1,11 @@
+.yogi-table {
+    font-size: 1.7em;
+}
+
+.yogi-table .lessons {
+    text-align: center;
+}
+
+.yogi-table .danger {
+    background-color: #b94a48;
+}

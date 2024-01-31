@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+<table class="table yogi-table">
+<tbody>
+{% for person in persons %}
+    <tr>
+    <td>{{ person.name }}</td>
+    <td class="lessons {% if person.availableLessons > 5 %}success{% elif person.availableLessons > 2%}warning{% else %}danger{% endif %}">{{ person.availableLessons}}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</div>
+{% endblock %}
+

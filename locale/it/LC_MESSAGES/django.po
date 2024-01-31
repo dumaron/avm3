@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-30 21:38+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: lessons/admin.py:5
+msgid "Pannello di amministrazione"
+msgstr ""
+
+#: lessons/admin.py:6
+msgid "Atma Vichara Manager 3"
+msgstr ""
+
+#: lessons/apps.py:7
+msgid "Lezioni di Yoga"
+msgstr ""
+
+#: lessons/models.py:18
+msgid "Lezione"
+msgstr ""
+
+#: lessons/models.py:19
+msgid "Lezioni"
+msgstr ""
+
+#: lessons/models.py:22
+#, python-format
+msgid "Lezione del %(date)s"
+msgstr ""
+
+#: lessons/models.py:26
+msgid "Nome"
+msgstr ""
+
+#: lessons/models.py:27
+msgid "Lezioni disponibili"
+msgstr ""
+
+#: lessons/models.py:28
+msgid "Tipologia abbonamento"
+msgstr ""
+
+#: lessons/models.py:29
+msgid "Data inizio abbonamento"
+msgstr ""
+
+#: lessons/models.py:30
+msgid "Archiviato"
+msgstr ""
+
+#: lessons/models.py:31
+msgid "Lezioni partecipate"
+msgstr ""
+
+#: lessons/models.py:34
+msgid "Iscritto"
+msgstr ""
+
+#: lessons/models.py:35
+msgid "Iscritti"
+msgstr ""
