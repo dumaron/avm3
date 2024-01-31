@@ -21,8 +21,8 @@
     },
     {
       "src": "/(.*)",
-      "dest": "<projectname>/wsgi.py"
+      "dest": "avm3/wsgi.py"
     }
   ],
-  "outputDirectory": "ui/staticfiles"
+  "outputDirectory": "static"
 }
