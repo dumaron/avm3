@@ -1,6 +1,9 @@
 certifi==2023.11.17
 Django==2.2.28
-psycopg2-binary==2.9.3
-pytz==2023.3.post1
+gunicorn==21.2.0
+packaging==23.2
+psycopg2==2.9.9
+pytz==2023.4
+sentry-sdk==1.39.2
 sqlparse==0.4.4
-urllib3==1.26.11
+urllib3==2.1.0
