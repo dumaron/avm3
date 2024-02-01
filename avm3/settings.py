@@ -1,6 +1,4 @@
 import os
-import sentry_sdk
-from sentry_sdk.integrations.django import DjangoIntegration
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -15,9 +13,6 @@ SECRET_KEY = 'zqp3^c4m8)t1meom1nw*x&jx!d2!@nz$n!l6@pu8=zatzow=14'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -127,13 +122,4 @@ LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
 
-ALLOWED_HOSTS = ['vps790617.ovh.net','localhost']
-
-sentry_sdk.init(
-    dsn="https://69b1a9ab9cd240e28234a6571f4b1347@sentry.io/5111197",
-    integrations=[DjangoIntegration()],
-
-    # If you wish to associate users to errors (assuming you are using
-    # django.contrib.auth) you may enable sending PII data.
-    send_default_pii=True
-)
+ALLOWED_HOSTS = ['localhost']
