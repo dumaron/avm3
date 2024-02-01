@@ -90,24 +90,24 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': True,
-    'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': './story.log',
-        },
-    },
-    'loggers': {
-        'lessons': {
-            'handlers': ['file'],
-            'level': 'INFO',
-            'propagate': False,
-        },
-    }
-}
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': True,
+#     'handlers': {
+#         'file': {
+#             'level': 'DEBUG',
+#             'class': 'logging.FileHandler',
+#             'filename': './story.log',
+#         },
+#     },
+#     'loggers': {
+#         'lessons': {
+#             'handlers': ['file'],
+#             'level': 'INFO',
+#             'propagate': False,
+#         },
+#     }
+# }
 
 LANGUAGE_CODE = 'it-it'
 TIME_ZONE = 'UTC'
