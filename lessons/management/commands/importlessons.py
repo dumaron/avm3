@@ -13,7 +13,8 @@ class Command(BaseCommand):
         with open(path) as json_file:
             data = json.load(json_file)
             for lesson in data:
-                print(lesson)
+                pass
+                # print(lesson)
                 #p = Lesson(
                 #    name=person['name'], 
                 #    archived=person['disabled'] if 'disabled' in person else True, 
