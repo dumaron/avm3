@@ -117,3 +117,4 @@ LOCALE_PATHS = (
 )
 
 ALLOWED_HOSTS = ['localhost', 'avm.fly.dev']
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
