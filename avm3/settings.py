@@ -1,4 +1,5 @@
 import os
+import dj_database_url
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -61,14 +62,7 @@ WSGI_APPLICATION = 'avm3.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        "USER": "postgres",
-        "PASSWORD": "avm",
-        "HOST": "localhost",
-        "PORT": 5439,
-        "NAME": "avm"
-    }
+    'default': dj_database_url.config()
 }
 
 
@@ -90,24 +84,24 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': True,
-#     'handlers': {
-#         'file': {
-#             'level': 'DEBUG',
-#             'class': 'logging.FileHandler',
-#             'filename': './story.log',
-#         },
-#     },
-#     'loggers': {
-#         'lessons': {
-#             'handlers': ['file'],
-#             'level': 'INFO',
-#             'propagate': False,
-#         },
-#     }
-# }
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': './story.log',
+        },
+    },
+    'loggers': {
+        'lessons': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    }
+}
 
 LANGUAGE_CODE = 'it-it'
 TIME_ZONE = 'UTC'
@@ -122,4 +116,4 @@ LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', 'avm.fly.dev']
