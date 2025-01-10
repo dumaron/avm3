@@ -10,7 +10,6 @@ console_command = '/code/manage.py shell'
 [build]
 
 [deploy]
-  release_command = 'python manage.py migrate --noinput'
 
 [env]
   PORT = '8000'
@@ -26,8 +25,12 @@ console_command = '/code/manage.py shell'
 [[vm]]
   cpu_kind = 'shared'
   cpus = 1
-  memory_mb = 1024
+  memory_mb = 512
 
 [[statics]]
   guest_path = '/code/static'
   url_prefix = '/static/'
+
+[mounts]
+  source="avm_sqlite"
+  destination="/db"

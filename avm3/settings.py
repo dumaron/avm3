@@ -1,19 +1,19 @@
 import os
-import dj_database_url
+# import dj_database_url
+from os import environ
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'zqp3^c4m8)t1meom1nw*x&jx!d2!@nz$n!l6@pu8=zatzow=14'
+SECRET_KEY = environ.get('SECRET_KEY', 'verysecretkey')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = environ.get('DEBUG', False)
 
 # Application definition
 
@@ -62,7 +62,10 @@ WSGI_APPLICATION = 'avm3.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        "NAME": environ.get('DATABASE_PATH', BASE_DIR + "db.sqlite3"),
+    }
 }
 
 

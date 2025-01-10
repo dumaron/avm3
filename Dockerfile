@@ -5,10 +5,10 @@ FROM python:${PYTHON_VERSION}
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# install psycopg2 dependencies.
 RUN apt-get update && apt-get install -y \
     libpq-dev \
     gcc \
+    sqlite3 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /code
@@ -20,9 +20,7 @@ COPY Pipfile Pipfile.lock /code/
 RUN pipenv install --deploy --system
 COPY . /code
 
-ENV SECRET_KEY "VZcYy0m5wv7gVANmzsSSF39bgEWDB0EKvymmbrzhUcQ1AlkZnw"
 RUN python manage.py collectstatic --noinput
 
 EXPOSE 8000
-
 CMD ["gunicorn", "--bind", ":8000", "--workers", "1", "avm3.wsgi"]
