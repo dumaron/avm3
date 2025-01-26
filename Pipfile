@@ -6,8 +6,8 @@ name = "pypi"
 [packages]
 django = "2.2.28"
 gunicorn = "*"
-psycopg2-binary = "*"
-dj-database-url = "*"
+boto3 = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
